@@ -1,29 +1,23 @@
 public class SmartTv {
-    boolean ligada = false;
+    boolean alimentacao = false;
     int canal = 1;
     int volume = 20;
 
-    public void alimentar() {
-        ligada = !ligada;
-    }
-
-    public void aumentarCanal() {
-        canal = canal + 1;
-    }
-
-    public void diminuirCanal() {
-        canal = canal - 1;
+    public void alimentar(int novaAlimentacao) {
+        alimentacao = (novaAlimentacao == 1 ? !alimentacao : alimentacao);
     }
 
     public void mudarCanal(int novoCanal) {
-        canal = novoCanal;
+        if (novoCanal == 1) {
+            canal = canal + 1;
+        } else if (novoCanal == -1) {
+            canal = canal - 1;
+        } else {
+            canal = novoCanal;
+        }
     }
 
-    public void aumentarVolume() {
-        volume = volume + 1;
-    }
-
-    public void diminuirVolume() {
-        volume = volume - 1;
+    public void mudarVolume(int novoVolume) {
+        volume = (novoVolume >= 1 ? volume + 1 : volume - 1);
     }
 }
