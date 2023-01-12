@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+
 public class SmartTv {
     boolean alimentacao = false;
     int canal = 1;
