@@ -5,18 +5,18 @@ public abstract class Conteudo {
     protected static final Double XP_PADRAO = 15d;
 
     protected String titulo;
-    private String Descricao;
+    private String descricao;
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
     public void setDescricao(String descricao) {
-        Descricao = descricao;
+        this.descricao = descricao;
     }
 
     public String getDescricao() {
-        return Descricao;
+        return descricao;
     }
 
     public String getTitulo() {

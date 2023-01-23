@@ -1,6 +1,8 @@
 import java.time.LocalDate;
 
+import dominio.Bootcamp;
 import dominio.Curso;
+import dominio.Dev;
 import dominio.Mentoria;
 
 public class Main {
@@ -14,5 +16,22 @@ public class Main {
         mentoria1.setTitulo("Projeto para portifolio");
         mentoria1.setDescricao("Descricao do Projeto para portifolio");
         mentoria1.setData(LocalDate.now());
+
+        Bootcamp bootcamp1 = new Bootcamp();
+        bootcamp1.setNome("Java + Spring Boot");
+        bootcamp1.setDescricao("Descricao do Bootcamp");
+        bootcamp1.getConteudos().add(curso1);
+        bootcamp1.getConteudos().add(mentoria1);
+
+        Dev dev1 = new Dev();
+        dev1.setNome("Dev1");
+        dev1.inscreverBootcamp(bootcamp1);
+        System.out.println("Conteudos incritos:" + dev1.getConteudosInscritos());
+
+        Dev dev2 = new Dev();
+        dev2.setNome("Dev2");
+        dev2.inscreverBootcamp(bootcamp1);
+        System.out.println("Conteudos incritos:" + dev2.getConteudosInscritos());
+
     }
 }
