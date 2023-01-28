@@ -1,13 +1,16 @@
 package maven.testes;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    private int id;
+    
+    public void setId(int id) {
+        this.id = id;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    
 }
